@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://charracter.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D"]
+position = Vector2( -81, -429 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 115, 302, 117, 250, 169, 265, 165, 342, 146, 361, 116, 351 )
+uv = PoolVector2Array( 115, 302, 117, 250, 169, 265, 165, 342, 146, 361, 116, 351 )
+bones = [ NodePath("Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Bone2D/Bone2D"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Bone2D/Bone2D/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Node2D"]
+position = Vector2( -77, -465 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 105, 389, 107, 364, 154, 354, 154, 473, 55, 472, 73, 439 )
+uv = PoolVector2Array( 105, 389, 107, 364, 154, 354, 154, 473, 55, 472, 73, 439 )
+bones = [ NodePath("Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Bone2D/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Bone2D/Bone2D/Bone2D"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ) ]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+position = Vector2( 95, -166 )
+rest = Transform2D( 1, 0, 0, 1, 95, -166 )
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D"]
+position = Vector2( -33, 14 )
+rest = Transform2D( 1, 0, 0, 1, -33, 14 )
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/Bone2D/Bone2D"]
+position = Vector2( -8, 62 )
+rotation = 1.5708
+rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, -8, 62 )
+default_length = 70.0
